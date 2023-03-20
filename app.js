@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -13,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-const db = 'mongodb+srv://andreaacardio:Pass321@cluster0.ikl3us9.mongodb.net/usersDB?retryWrites=true&w=majority';
+const db = 'mongodb+srv://'+process.env.DB_LOG+':'+process.env.DB_PASS+'@cluster0.ikl3us9.mongodb.net/usersDB?retryWrites=true&w=majority';
 
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -25,8 +26,8 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-const secret = "This is our little secret";
-userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password']});
+
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password']});
 
 const User = new mongoose.model("User", userSchema);
 
