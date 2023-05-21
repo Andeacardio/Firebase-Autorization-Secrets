@@ -1,16 +1,270 @@
 
 body {
-  background-color: #E8ECEF;
-}
+  background-color: #f2f4f5;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
 
+}
 .centered {
-    padding-top: 200px;
-    text-align: center;
+  text-align: center;
+  background-color: #f2f4f5;
 }
-
 .secret-text {
   text-align: center;
   font-size: 2rem;
   color: #fff;
   background-color: #000;
 }
+.flex-box{
+  display: flex;
+  flex-direction: row;
+}
+.flex-box-column{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 991.98px){
+ 
+}
+@media (max-width: 767.98px){
+  .flex-box{
+    flex-direction: column;
+  }
+}
+@media (max-width: 479.98px){
+
+}
+
+/*---------------Left----------------------*/
+.left-side{
+  width: 50%;
+}
+.left-side img{
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  height: auto;
+}
+.left-side_text{
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  z-index: 3;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+@media (max-width: 991.98px){
+ .left-side_text{
+  font-size: 1rem;
+ }
+}
+@media (max-width: 767.98px){
+  .left-side{
+    width: 100%;
+  }
+  
+}
+@media (max-width: 479.98px){
+ .left-side_text{
+  top: 50px;
+ }
+}
+/*---------------Right----------------------*/
+.right-side{
+  width: 50%;
+  overflow: hidden;
+ 
+}
+.mt-5{
+  padding: 0 auto;
+}
+.right-side_img{
+  text-align: center;
+  padding-top: -70px;
+}
+.right-side_img img{
+  width: 31%;
+  border-radius: 10px;
+  padding-top: -30px;
+}
+.horizontal-role{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  width: 70%;
+  justify-content: center;
+}
+.horizontal-role p::before{
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 1px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: grey;
+}
+.horizontal-role p::after{
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 1px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: grey;
+}
+@media (max-width: 991.98px){
+ .horizontal-role::before{
+  width: 10px;
+ }
+ .horizontal-role::after{
+  width: 10px;
+ }
+}
+@media (max-width: 767.98px){
+  .right-side{
+    position: relative;
+    width: 100%;
+    margin-top: -70%;
+    z-index: 5;
+    background-color: #f2f4f5;
+    padding-bottom: 50px;
+  }
+ 
+}
+@media (max-width: 479.98px){
+
+}
+/*-------------------Register and login----------------------------*/
+.container {
+  width: 100%;
+  
+  padding: 0 15%;
+  
+  margin: 0 auto;
+
+ 
+}
+
+.container input{
+  border: none;
+  border-bottom: 2px solid rgb(194, 187, 187);
+  width: 70%;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+  background-color: #f2f4f5;
+  transition: 0.5s ;
+
+}
+.container input:hover{
+  border: none;
+  border-bottom: 2px solid rgb(97, 95, 95);
+  transition: 0.5s ;
+}
+.container hr{
+  margin-bottom: 40px;
+  width: 70%;
+}
+.btn {
+  padding: 10px;
+  width: 71%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(80, 76, 76);
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.btn:hover{
+  background-color: rgb(153, 146, 146);
+  transition: 0.5s;
+}
+.btn-light{
+  background-color: rgb(153, 146, 146);
+  transition: 0.5s;
+}
+.btn-light:hover{
+  background-color: rgb(80, 76, 76);
+  transition: 0.5s;
+}
+.btn-lg{
+  display: block;
+  width: 71%;
+  margin-bottom: 20px;
+
+}
+
+/*----------------Other---------------------*/
+.links{
+  margin-top: 30px;
+
+}
+.lead{
+  font-size: 25px;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.secret-text{
+  width: 73%;
+}
+.jumbotron{
+  
+  text-align: left;
+}
+.mt-5 {
+}
+.col-sm-8 {
+  
+}
+.card {
+}
+.sign-with a{
+  display: block;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 70%;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.sign-with p{
+
+  position:relative;
+  top: -10px;
+  padding-left: 30px;
+  margin-bottom:10px;
+  
+}
+.form-group {
+  padding-bottom: 20px;
+}
+.form-control {
+}
+.btn {
+}
+.btn-dark {
+}
+.col-sm-4 {
+}
+.btn-block {
+}
+.btn-google {
+}
+.btn-social {
+}
+.fab {
+}
+.fa-google {
+}
+.btn-facebook {
+}
+.fa-facebook {
+}
+
